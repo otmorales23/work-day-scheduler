@@ -41,5 +41,14 @@ $(function () {
     setColor()
 
     //render frm local storage on page load
+    function getlocalStorage() {
+        $(".description").each(function () {
+            let key = $(this).parent().attr("id")
+            console.log(key);
+            $(this).val(localStorage.getItem(key))
+        })
+    }
+    
+    getlocalStorage()
 
 });
