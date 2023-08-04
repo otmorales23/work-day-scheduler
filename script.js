@@ -9,7 +9,11 @@ getTime()
 
 //save value of text area for each timeblock to local storage
 $(".saveBtn").click(function (){
-    
+    let timeblockHourId = $(this).parent().attr("id")
+    let userInput = $(this).prev().val()
+    console.log(timeblockHourId);
+    console.log(userInput);
+    localStorage.setItem(timeblockHourId, userInput)
 })
 
 //set color based on past present or future
